@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="color_hei_8">#00000000</color>
+    <color name="transparent">@color/color_hei_8</color>
+    <color name="B_black">#ff000000</color>
+    <color name="B_black_50">#80000000</color>
+    <color name="B_black_05">#10000000</color>
+    <color name="B_black_90">#19000000</color>
+    <color name="white">#FFffffff</color>
+    <color name="white_30">#4Cffffff</color>
+    <color name="white_70">#B2ffffff</color>
+    <color name="white_50">#7Fffffff</color>
+    <color name="white_90">#19ffffff</color>
+    <color name="white_transparent">#00ffffff</color>
+    <color name="actionbar_background_start">#00CD2626</color>
+    <color name="actionbar_background_end">#00EB1818</color>
+    <color name="actionbar_background_item_pressed_start">#FF7F00</color>
+    <!-- 趋势图背景颜色 -->
+    <color name="color_page_title">#ffffffff</color>
+    <color name="semi_transparent">#7f000000</color>
+
+    <color name="color_gray">#a6a6a6</color>
+    <color name="tab_text_color_normal">#cecece</color>
+    <color name="tab_text_color_pressed">#139cff</color>
+    <color name="page_unselecte_color">#849ab5</color>
+
+    <color name="color_common_bg">#2c4a72</color>
+    <!-- 折线图颜色 -->
+    <color name="color_white_tread_bg">#ccffffff</color>
+    <!-- 折线的颜色 -->
+    <color name="color_tread_line_bg">#3ae44e</color>
+    <color name="color_low_temp_line">#00deff</color>
+
+    <color name="color_main_search_button_bg">#0091ff</color>
+    <color name="color_main_below_bg">#e2f2ff</color>
+    <color name="color_main_text_blue">#0091ff</color>
+    <color name="color_main_text_gray">#cccccc</color>
+    <color name="color_text_red">#fc563d</color>
+    <color name="color_search_title">#333333</color>
+    <color name="color_search_line">#dfdfdf</color>
+    <color name="color_enterprise_bg">#f8f8f8</color>
+    <color name="color_city_name">#ffffff</color>
+    <color name="color_gray666">#666666</color>
+    <color name="color_gray999">#999999</color>
+    <color name="color_year_text">#b3b3b3</color>
+    <color name="color_gray_f8">#f8f8f8</color>
+    <color name="color_blue">#33a7ff</color>
+    <color name="color_hot">#ff5534</color>
+    <color name="search_title_bg">#ececec</color>
+    <color name="suggesed_reading_title_bg">#fda428</color>
+    <color name="suggesed_reading_title1_bg">#b3333333</color>
+
+    <color name="micro_will_bottom_text_bg">#ffece9</color>
+    <color name="main_point_select_bg">#8a8a8b</color>
+    <color name="main_point_normal_bg">#c4c5c7</color>
+    <color name="top_bar_color">#2669c4</color>
+    <color name="color_line">#fff0f0f0</color>
+
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <!--<color name="transparent">#00000000</color> -->
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+</resources>

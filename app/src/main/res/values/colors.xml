@@ -72,4 +72,11 @@
     <!--<color name="transparent">#00000000</color> -->
     <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
     <color name="viewfinder_mask">#60000000</color>
+
+    <color name="colorPageBg">#f2f4f5</color>
+
+    <color name="colorTheme">#ffce3d3a</color>
+    <color name="colorTabTextCheck">#ffce3d3a</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="colorTabText">#585858</color>
 </resources>

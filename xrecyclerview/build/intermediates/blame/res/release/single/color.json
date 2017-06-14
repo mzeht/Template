@@ -1,0 +1,166 @@
+[
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_default.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_spinner.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/switch_thumb_material_dark.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_switch_track.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_spinner.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_primary_text_material_light.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_switch_thumb.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_btn_checkable.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_edittext.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_search_url_text.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_default.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/switch_thumb_material_dark.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/switch_thumb_material_light.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/design_error.xml",
+        "source": "/Users/wpmac/.android/build-cache/44c04526ad727abb6ad5eaa506482d2d6401a2d9/output/res/color/design_error.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_btn_colored_text_material.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_search_url_text.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_primary_text_material_dark.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_seek_thumb.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_hint_foreground_material_dark.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_primary_text_material_light.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_switch_thumb.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/switch_thumb_material_light.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/design_tint_password_toggle.xml",
+        "source": "/Users/wpmac/.android/build-cache/44c04526ad727abb6ad5eaa506482d2d6401a2d9/output/res/color/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_edittext.xml",
+        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/release/color/abc_tint_switch_track.xml",
+        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/color/abc_tint_switch_track.xml"
+    }
+]

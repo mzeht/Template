@@ -1,26 +1,50 @@
 [
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
-        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/layout-v11/notification_media_action.xml"
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
-        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/layout-v11/notification_media_cancel_action.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
-        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/layout-v11/notification_template_big_media_custom.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
-        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/layout-v11/notification_template_big_media_narrow.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\layout-v11\\notification_media_action.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
-        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/layout-v11/notification_template_big_media.xml"
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\layout-v11\\notification_template_big_media.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
-        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_custom.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\layout-v11\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\layout-v11\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow_custom.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\layout-v11\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_cancel_action.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\layout-v11\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_media_action.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\layout-v11\\notification_media_action.xml"
+    },
+    {
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v11\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\layout-v11\\notification_template_big_media_narrow.xml"
     }
 ]

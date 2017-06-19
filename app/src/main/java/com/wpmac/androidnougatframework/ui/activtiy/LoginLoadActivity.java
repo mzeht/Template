@@ -1,6 +1,7 @@
 package com.wpmac.androidnougatframework.ui.activtiy;
 
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.wpmac.androidnougatframework.R;
 import com.wpmac.androidnougatframework.base.BaseLoadActivity;
@@ -16,7 +17,14 @@ public class LoginLoadActivity extends BaseLoadActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-        showContentView();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                showContentView();
+            }
+        }, 1000);
+
+
     }
 
     @OnClick(R.id.hehe)

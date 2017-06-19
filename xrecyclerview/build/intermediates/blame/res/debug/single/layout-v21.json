@@ -1,34 +1,50 @@
 [
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/layout-v21/notification_action.xml"
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/layout-v21/notification_action_tombstone.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/layout-v21/notification_template_custom_big.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/layout-v21/notification_template_icon_group.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\CloudReader\\library\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\3f9addf93c2cd86f1d894b83dd05b0ce49368b97\\output\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/layout-v21/notification_action_tombstone.xml"
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/layout-v21/notification_action.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/layout-v21/notification_template_icon_group.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\CloudReader\\library\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\3f9addf93c2cd86f1d894b83dd05b0ce49368b97\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/layout-v21/notification_template_custom_big.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\CloudReader\\library\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\3f9addf93c2cd86f1d894b83dd05b0ce49368b97\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\CloudReader\\library\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\3f9addf93c2cd86f1d894b83dd05b0ce49368b97\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\layout-v21\\notification_action.xml"
     }
 ]

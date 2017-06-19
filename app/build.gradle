@@ -30,7 +30,7 @@ android {
         ndk {
             //设置支持的SO库架构
 //            ldLibs.addAll([ 'log']);
-            abiFilters 'armeabi-v7a', 'arm64-v8a'//'armeabi', 'x86','x86_64',
+            abiFilters 'armeabi-v7a', 'arm64-v8a','armeabi', 'x86','x86_64'
         }
         sourceSets.main {
             jniLibs.srcDir 'src/main/jinLibs'
@@ -123,4 +123,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     retrolambdaConfig 'net.orfjackal.retrolambda:retrolambda:2.3.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
 }

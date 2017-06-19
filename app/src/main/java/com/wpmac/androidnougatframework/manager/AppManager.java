@@ -99,7 +99,7 @@ public class AppManager {
     public void AppExit(Context context) {
         try {
             finishAllActivity();
-            /*Intent intent = new Intent(context, MainLoadActivity.class);
+            /*Intent intent = new Intent(context, MainActivity.class);
             PendingIntent restartIntent = PendingIntent.getActivity(    
             		context, 0, intent,    
                     Intent.FLAG_ACTIVITY_NEW_TASK);                                                 

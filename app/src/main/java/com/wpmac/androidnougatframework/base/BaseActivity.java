@@ -15,6 +15,8 @@ import com.wpmac.androidnougatframework.debug.L;
 import com.wpmac.androidnougatframework.manager.AppManager;
 import com.wpmac.premisson.XPermissionUtils;
 
+import butterknife.ButterKnife;
+
 /**
  * @author: wpmac  Date: 2017/6/14 Time: 下午1:14
  * @email: mzeht8303@gamil.com
@@ -25,6 +27,7 @@ public class BaseActivity extends RxAppCompatActivity {
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         AppManager.getAppManager().addActivity(this);
+
 
     }
 

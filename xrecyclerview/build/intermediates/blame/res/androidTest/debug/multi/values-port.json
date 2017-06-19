@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/wpmac/AndroidStudioProjects/CloudReader/library/xrecyclerview/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-port/values-port.xml",
+        "outputFile": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-port\\values-port.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "/Users/wpmac/.android/build-cache/3f9addf93c2cd86f1d894b83dd05b0ce49368b97/output/res/values-port/values-port.xml",
+                    "file": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\values-port\\values-port.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -24,7 +24,7 @@
         ]
     },
     {
-        "outputFile": "/Users/wpmac/AndroidStudioProjects/AndroidNougatFrameWork/xrecyclerview/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-port/values-port.xml",
+        "outputFile": "D:\\Users\\wpmac\\AndroidStudioProjects\\AndroidNougatFrameWork\\xrecyclerview\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-port\\values-port.xml",
         "map": [
             {
                 "to": {
@@ -35,7 +35,31 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "/Users/wpmac/.android/build-cache/6518ed28c50ab5fc7d94c78c9f5691a26cae39d4/output/res/values-port/values-port.xml",
+                    "file": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\values-port\\values-port.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 55,
+                        "endOffset": 106
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "D:\\Users\\wpmac\\AndroidStudioProjects\\CloudReader\\library\\xrecyclerview\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-port\\values-port.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "D:\\Users\\wpmac\\.android\\build-cache\\3f9addf93c2cd86f1d894b83dd05b0ce49368b97\\output\\res\\values-port\\values-port.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

@@ -11,7 +11,7 @@ import org.greenrobot.greendao.query.QueryBuilder;
 
 public class DBManager {
 
-    private final static String dbName = "base.db";
+    private final static String dbName = "bindingView.db";
     private static DBManager mInstance;
     private DaoMaster.DevOpenHelper openHelper;
     private Context context;

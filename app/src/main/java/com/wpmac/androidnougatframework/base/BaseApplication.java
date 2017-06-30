@@ -3,7 +3,6 @@ package com.wpmac.androidnougatframework.base;
 import android.app.Application;
 import android.content.Context;
 
-import com.wpmac.androidnougatframework.db.DBManager;
 import com.wpmac.androidnougatframework.utils.Utils;
 
 /**
@@ -26,7 +25,7 @@ public class BaseApplication extends Application {
         mContext = this;
         sApplication = this;
         BasePreference.initialize(mContext);
-        DBManager.initialize(mContext);
+//        DBManager.initialize(mContext);
         Utils.init(mContext);
 
     }

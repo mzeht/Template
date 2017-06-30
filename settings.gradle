@@ -1,1 +1,1 @@
-include ':app', ':permission', ':network', ':xrecyclerview'
+include ':app', ':permission', ':xrecyclerview', ':multiplestatusview'

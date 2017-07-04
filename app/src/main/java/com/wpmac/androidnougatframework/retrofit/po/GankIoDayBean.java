@@ -1,6 +1,8 @@
 package com.wpmac.androidnougatframework.retrofit.po;
 
-import com.example.http.ParamNames;
+
+import com.wpmac.androidnougatframework.bean.AndroidBean;
+import com.wpmac.androidnougatframework.retrofit.base.ParamNames;
 
 import java.io.Serializable;
 import java.util.List;

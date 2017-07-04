@@ -1,6 +1,7 @@
 package com.wpmac.androidnougatframework.ui.gank;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,37 +19,37 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.xrecyclerview.XRecyclerView;
 import com.wpmac.androidnougatframework.R;
-import com.wpmac.androidnougatframework.adapter.EmptyAdapter;
 import com.wpmac.androidnougatframework.base.BaseLoadFragment;
 import com.wpmac.androidnougatframework.bean.AndroidBean;
 import com.wpmac.androidnougatframework.constants.Constants;
 import com.wpmac.androidnougatframework.http.cache.ACache;
 import com.wpmac.androidnougatframework.model.EverydayModel;
+import com.wpmac.androidnougatframework.multitype.EveryDayOneViewBinder;
+import com.wpmac.androidnougatframework.multitype.EveryDayTwoViewBinder;
 import com.wpmac.androidnougatframework.retrofit.base.ApiManagment;
 import com.wpmac.androidnougatframework.retrofit.po.FrontpageBean;
 import com.wpmac.androidnougatframework.rxbus.RxBus;
 import com.wpmac.androidnougatframework.rxbus.RxBusBaseMessage;
 import com.wpmac.androidnougatframework.rxbus.RxCodeConstants;
-import com.wpmac.androidnougatframework.utils.CommonUtils;
 import com.wpmac.androidnougatframework.utils.DebugUtil;
 import com.wpmac.androidnougatframework.utils.GlideImageLoader;
 import com.wpmac.androidnougatframework.utils.PerfectClickListener;
 import com.wpmac.androidnougatframework.utils.SPUtils;
 import com.wpmac.androidnougatframework.utils.TimeUtil;
 import com.youth.banner.Banner;
-import com.youth.banner.listener.OnBannerClickListener;
-
-import org.reactivestreams.Subscription;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
+import me.drakeet.multitype.ClassLinker;
+import me.drakeet.multitype.ItemViewBinder;
+import me.drakeet.multitype.Items;
+import me.drakeet.multitype.MultiTypeAdapter;
 
 
 /**
@@ -73,7 +74,7 @@ public class EverydayFragment extends BaseLoadFragment {
     private FooterItemEverydayBinding mFooterBinding;
     private View mHeaderView;
     private View mFooterView;
-    private EverydayAdapter mEverydayAdapter;
+//    private EverydayAdapter mEverydayAdapter;
     private boolean mIsPrepared = false;
     private boolean mIsFirst = true;
     // 是否是上一天的请求
@@ -119,6 +120,9 @@ public class EverydayFragment extends BaseLoadFragment {
     class FooterItemEverydayBinding{
 
     }
+
+    private Items mItems = new Items();
+    private MultiTypeAdapter mMultiTypeAdapter = new MultiTypeAdapter();
 
     @Override
     public int setContent() {
@@ -334,23 +338,7 @@ public class EverydayFragment extends BaseLoadFragment {
         }
     }
 
-    /**
-     * 无数据返回时，暂时去掉
-     */
-    private void setEmptyAdapter() {
-        showRotaLoading(false);
 
-        EmptyAdapter emptyAdapter = new EmptyAdapter();
-        ArrayList<String> list = new ArrayList<>();
-        list.add(CommonUtils.getString(R.string.string_everyday_empty));
-        emptyAdapter.addAll(list);
-        xrvEveryday.setAdapter(emptyAdapter);
-
-        // 保存请求的日期
-        SPUtils.putString("everyday_data", TimeUtil.getData());
-
-        mIsFirst = false;
-    }
 
     private void initRecyclerView() {
         xrvEveryday.setPullRefreshEnabled(false);
@@ -374,12 +362,24 @@ public class EverydayFragment extends BaseLoadFragment {
 
     private void setAdapter(ArrayList<List<AndroidBean>> lists) {
         showRotaLoading(false);
-        if (mEverydayAdapter == null) {
-            mEverydayAdapter = new EverydayAdapter();
+        if (mMultiTypeAdapter == null) {
+            mMultiTypeAdapter = new MultiTypeAdapter();
         } else {
-            mEverydayAdapter.clear();
+
         }
-        mEverydayAdapter.addAll(lists);
+        mMultiTypeAdapter.setItems(mItems);
+        mMultiTypeAdapter.register(AndroidBean.class).
+                to(new EveryDayOneViewBinder(), new EveryDayTwoViewBinder())
+                .withClassLinker(new ClassLinker<AndroidBean>() {
+                    @NonNull
+                    @Override
+                    public Class<? extends ItemViewBinder<AndroidBean, ?>> index(@NonNull AndroidBean androidBean) {
+                        return null;
+                    }
+                });
+
+        mItems.addAll(lists);
+//        mEverydayAdapter.addAll(lists);
 //        DebugUtil.error("----111111 ");
 //        xrvEveryday.setAdapter(mEverydayAdapter);
 //        mEverydayAdapter.notifyDataSetChanged();
@@ -397,8 +397,8 @@ public class EverydayFragment extends BaseLoadFragment {
         }
         mIsFirst = false;
 
-        xrvEveryday.setAdapter(mEverydayAdapter);
-        mEverydayAdapter.notifyDataSetChanged();
+        xrvEveryday.setAdapter(mMultiTypeAdapter);
+        mMultiTypeAdapter.notifyDataSetChanged();
     }
 
     @Override

@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-    <data>
-
-        <variable
-            name="string"
-            type="java.lang.String" />
-
-    </data>
-
-
-    <LinearLayout
-        android:id="@+id/ll_empty"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+<LinearLayout
+    android:id="@+id/ll_empty"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
         <TextView
             android:id="@+id/tv_empty"
@@ -24,10 +13,8 @@
             android:gravity="center_horizontal"
             android:lineSpacingExtra="4dp"
             android:padding="18dp"
-            android:text="@{string}"
+            android:text=""
             android:textSize="15sp"
             android:visibility="visible" />
 
     </LinearLayout>
-
-</layout>

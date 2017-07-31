@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\AndroidProject\Template\xrecyclerview\src\main\assets"/><source path="D:\AndroidProject\Template\xrecyclerview\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\AndroidProject\Template\xrecyclerview\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/wpmac/AndroidStudioProjects/Template/xrecyclerview/src/main/assets"/><source path="/Users/wpmac/AndroidStudioProjects/Template/xrecyclerview/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/wpmac/AndroidStudioProjects/Template/xrecyclerview/src/debug/assets"/></dataSet></merger>

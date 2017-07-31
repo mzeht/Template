@@ -1,78 +1,101 @@
 package com.wpmac.androidnougatframework;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.widget.SwitchCompat;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.wpmac.androidnougatframework.base.BaseActivity;
 import com.wpmac.androidnougatframework.constants.ConstantsImageUrl;
+import com.wpmac.androidnougatframework.databinding.ActivityMainBinding;
+import com.wpmac.androidnougatframework.databinding.NavHeaderMainBinding;
+import com.wpmac.androidnougatframework.ui.gank.GankFragment;
 import com.wpmac.androidnougatframework.utils.CommonUtils;
 import com.wpmac.androidnougatframework.utils.ImgLoadUtil;
 import com.wpmac.androidnougatframework.utils.PerfectClickListener;
 import com.wpmac.androidnougatframework.utils.SPUtils;
+import com.wpmac.androidnougatframework.view.MyFragmentPagerAdapter;
 import com.wpmac.androidnougatframework.view.statusbar.StatusBarUtil;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity implements  ViewPager.OnPageChangeListener, View.OnClickListener {
 
-    @BindView(R.id.view_status)
-    View viewStatus;
-    @BindView(R.id.iv_title_gank)
-     ImageView llTitleGank;
-    @BindView(R.id.iv_title_one)
-     ImageView llTitleOne;
-    @BindView(R.id.iv_title_dou)
-     ImageView llTitleDou;
-    @BindView(R.id.drawer_layout)
-    DrawerLayout drawerLayout;
-    @BindView(R.id.nav_view)
-    NavigationView navView;
-    @BindView(R.id.ll_title_menu)
-    FrameLayout titleMenu;
+//    @BindView(R.id.view_status)
+//    View viewStatus;
+//    @BindView(R.id.iv_title_gank)
+//     ImageView llTitleGank;
+//    @BindView(R.id.iv_title_one)
+//     ImageView llTitleOne;
+//    @BindView(R.id.iv_title_dou)
+//     ImageView llTitleDou;
+//    @BindView(R.id.drawer_layout)
+//    DrawerLayout drawerLayout;
+//    @BindView(R.id.nav_view)
+//    NavigationView navView;
+//    @BindView(R.id.ll_title_menu)
+//    FrameLayout titleMenu;
+//    @BindView(R.id.vp_content)
+//    ViewPager vpContent;
 
     //头部布局
-    class HeadviewBind{
-        @BindView(R.id.day_night_switch)
-        SwitchCompat dayNightSwitch;
-        @BindView(R.id.ll_nav_exit)
-        LinearLayout llNavExit;
-        @BindView(R.id.iv_avatar)
-        ImageView ivAvatar;
-        @BindView(R.id.ll_nav_homepage)
-        LinearLayout llNavHomepage;
-        @BindView(R.id.ll_nav_scan_download)
-        LinearLayout llNavScanDownload;
-        @BindView(R.id.ll_nav_deedback)
-        LinearLayout llNavDeedback;
-        @BindView(R.id.ll_nav_about)
-        LinearLayout llNavAbout;
-        @BindView(R.id.ll_nav_login)
-        LinearLayout llNavLogin;
+//    class HeadviewBind{
+//        @BindView(R.id.day_night_switch)
+//        SwitchCompat dayNightSwitch;
+//        @BindView(R.id.ll_nav_exit)
+//        LinearLayout llNavExit;
+//        @BindView(R.id.iv_avatar)
+//        ImageView ivAvatar;
+//        @BindView(R.id.ll_nav_homepage)
+//        LinearLayout llNavHomepage;
+//        @BindView(R.id.ll_nav_scan_download)
+//        LinearLayout llNavScanDownload;
+//        @BindView(R.id.ll_nav_deedback)
+//        LinearLayout llNavDeedback;
+//        @BindView(R.id.ll_nav_about)
+//        LinearLayout llNavAbout;
+//        @BindView(R.id.ll_nav_login)
+//        LinearLayout llNavLogin;
+//
+//    }
 
-    }
+//    //头部绑定
+//    HeadviewBind headViewBind=new HeadviewBind();
 
-    //头部绑定
-    HeadviewBind headViewBind=new HeadviewBind();
 
+
+    private FrameLayout llTitleMenu;
+    private Toolbar toolbar;
+    private FloatingActionButton fab;
+    private NavigationView navView;
+    private DrawerLayout drawerLayout;
+    private ViewPager vpContent;
+
+    // 一定需要对应的bean
+    private ActivityMainBinding mBinding;
+    private ImageView llTitleGank;
+    private ImageView llTitleOne;
+    private ImageView llTitleDou;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+//        ButterKnife.bind(this);
         initStatusView();
+        initId();
         StatusBarUtil.setColorNoTranslucentForDrawerLayout(MainActivity.this, drawerLayout,
                 CommonUtils.getColor(R.color.colorTheme));
         initContentFragment();
@@ -82,7 +105,22 @@ public class MainActivity extends BaseActivity implements  ViewPager.OnPageChang
     }
 
     private void initListener() {
-        titleMenu.setOnClickListener(this);
+        llTitleMenu.setOnClickListener(this);
+    }
+
+
+    private void initId() {
+        drawerLayout = mBinding.drawerLayout;
+        navView = mBinding.navView;
+        fab = mBinding.include.fab;
+        toolbar = mBinding.include.toolbar;
+        llTitleMenu = mBinding.include.llTitleMenu;
+        vpContent = mBinding.include.vpContent;
+        fab.setVisibility(View.GONE);
+
+        llTitleGank = mBinding.include.ivTitleGank;
+        llTitleOne = mBinding.include.ivTitleOne;
+        llTitleDou = mBinding.include.ivTitleDou;
     }
 
     @Override
@@ -97,23 +135,32 @@ public class MainActivity extends BaseActivity implements  ViewPager.OnPageChang
     }
 
 
+    NavHeaderMainBinding bind;
     private void initDrawerLayout() {
-        navView.inflateHeaderView(R.layout.nav_header_main);
+        mBinding.navView.inflateHeaderView(R.layout.nav_header_main);
         View headerView = navView.getHeaderView(0);
-        ButterKnife.bind(headViewBind, headerView);
-        headViewBind.dayNightSwitch.setChecked(SPUtils.getNightMode());
-        ImgLoadUtil.displayCircle(headViewBind.ivAvatar, ConstantsImageUrl.IC_AVATAR);
-        headViewBind.llNavExit.setOnClickListener(this);
-        headViewBind.ivAvatar.setOnClickListener(this);
-        headViewBind.llNavHomepage.setOnClickListener(listener);
-        headViewBind.llNavScanDownload.setOnClickListener(listener);
-        headViewBind.llNavDeedback.setOnClickListener(listener);
-        headViewBind.llNavAbout.setOnClickListener(listener);
-        headViewBind.llNavLogin.setOnClickListener(listener);
+//        ButterKnife.bind(headViewBind, headerView);
+        bind = DataBindingUtil.bind(headerView);
+        bind.dayNightSwitch.setChecked(SPUtils.getNightMode());
+        ImgLoadUtil.displayCircle(bind.ivAvatar, ConstantsImageUrl.IC_AVATAR);
+        bind.llNavExit.setOnClickListener(this);
+        bind.ivAvatar.setOnClickListener(this);
+        bind.llNavHomepage.setOnClickListener(listener);
+        bind.llNavScanDownload.setOnClickListener(listener);
+        bind.llNavDeedback.setOnClickListener(listener);
+        bind.llNavAbout.setOnClickListener(listener);
+        bind.llNavLogin.setOnClickListener(listener);
     }
 
     private void initContentFragment() {
 
+        ArrayList<Fragment> mFragmentList = new ArrayList<>();
+        mFragmentList.add(new GankFragment());
+        MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), mFragmentList);
+        vpContent.setAdapter(adapter);
+        vpContent.addOnPageChangeListener(this);
+        llTitleGank.setSelected(false);
+        vpContent.setCurrentItem(0);
     }
 
     private PerfectClickListener listener = new PerfectClickListener() {
@@ -124,9 +171,9 @@ public class MainActivity extends BaseActivity implements  ViewPager.OnPageChang
     };
 
     private void initStatusView() {
-        ViewGroup.LayoutParams layoutParams = viewStatus.getLayoutParams();
+        ViewGroup.LayoutParams layoutParams =  mBinding.include.viewStatus.getLayoutParams();
         layoutParams.height = StatusBarUtil.getStatusBarHeight(this);
-        viewStatus.setLayoutParams(layoutParams);
+        mBinding.include.viewStatus.setLayoutParams(layoutParams);
     }
 
     @Override

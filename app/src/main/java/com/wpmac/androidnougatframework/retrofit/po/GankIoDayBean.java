@@ -7,10 +7,14 @@ import com.wpmac.androidnougatframework.retrofit.base.ParamNames;
 import java.io.Serializable;
 import java.util.List;
 
+import lombok.Data;
+import lombok.ToString;
+
 /**
  * Created by jingbin on 2016/11/24.
  */
-
+@Data
+@ToString
 public class GankIoDayBean implements Serializable {
 
     @ParamNames("error")
@@ -58,49 +62,7 @@ public class GankIoDayBean implements Serializable {
         @ParamNames("福利")
         private List<AndroidBean> welfare;
 
-
-        public List<AndroidBean> getAndroid() {
-            return Android;
-        }
-
-        public List<AndroidBean> getiOS() {
-            return iOS;
-        }
-
-        public List<AndroidBean> getRestMovie() {
-            return restMovie;
-        }
-
-        public List<AndroidBean> getResource() {
-            return resource;
-        }
-
-        public List<AndroidBean> getRecommend() {
-            return recommend;
-        }
-
-        public List<AndroidBean> getWelfare() {
-            return welfare;
-        }
-
-        public List<AndroidBean> getFront() {
-            return front;
-        }
-
-        public List<AndroidBean> getApp() {
-            return app;
-        }
     }
 
-    public boolean isError() {
-        return error;
-    }
 
-    public ResultsBean getResults() {
-        return results;
-    }
-
-    public List<String> getCategory() {
-        return category;
-    }
 }

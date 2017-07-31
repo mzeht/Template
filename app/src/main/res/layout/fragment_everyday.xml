@@ -1,7 +1,9 @@
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <com.example.xrecyclerview.XRecyclerView
             android:id="@+id/xrv_everyday"
@@ -43,3 +45,5 @@
         </LinearLayout>
 
     </RelativeLayout>
+
+</layout>

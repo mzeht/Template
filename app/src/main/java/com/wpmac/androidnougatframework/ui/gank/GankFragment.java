@@ -4,34 +4,22 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 
 import com.wpmac.androidnougatframework.R;
 import com.wpmac.androidnougatframework.base.BaseLoadFragment;
-import com.wpmac.androidnougatframework.rxbus.RxBus;
-import com.wpmac.androidnougatframework.rxbus.RxCodeConstants;
+import com.wpmac.androidnougatframework.databinding.FragmentGankBinding;
 import com.wpmac.androidnougatframework.view.MyFragmentPagerAdapter;
 
-import org.reactivestreams.Subscription;
-
 import java.util.ArrayList;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.functions.Consumer;
 
 /**
  * Created by Administrator on 2017/6/30.
  */
 
-public class GankFragment extends BaseLoadFragment {
+public class GankFragment extends BaseLoadFragment<FragmentGankBinding> {
     private ArrayList<String> mTitleList = new ArrayList<>(4);
     private ArrayList<Fragment> mFragments = new ArrayList<>(4);
-    @BindView(R.id.vp_gank)
-    ViewPager vpGank;
-    @BindView(R.id.tab_gank)
-    TabLayout tabGank;
+
 
 
 
@@ -41,19 +29,18 @@ public class GankFragment extends BaseLoadFragment {
 
         showLoading();
         initFragmentList();
-        ButterKnife.bind(this, bindingView);
         /**
          * 注意使用的是：getChildFragmentManager，
          * 这样setOffscreenPageLimit()就可以添加上，保留相邻3个实例，切换时不会卡
          * 但会内存溢出，在显示时加载数据
          */
         MyFragmentPagerAdapter myAdapter = new MyFragmentPagerAdapter(getChildFragmentManager(), mFragments, mTitleList);
-        vpGank.setAdapter(myAdapter);
+        bindingView.vpGank.setAdapter(myAdapter);
         // 左右预加载页面的个数
-        vpGank.setOffscreenPageLimit(3);
+        bindingView.vpGank.setOffscreenPageLimit(3);
         myAdapter.notifyDataSetChanged();
-        tabGank.setTabMode(TabLayout.MODE_FIXED);
-        tabGank.setupWithViewPager(vpGank);
+        bindingView.tabGank.setTabMode(TabLayout.MODE_FIXED);
+        bindingView.tabGank.setupWithViewPager(bindingView.vpGank);
         showContentView();
         // item点击跳转
         initRxBus();
@@ -82,21 +69,21 @@ public class GankFragment extends BaseLoadFragment {
      * 每日推荐点击"更多"跳转
      */
     private void initRxBus() {
-        Subscription subscription = (Subscription) RxBus.getDefault().toObservable(RxCodeConstants.JUMP_TYPE, Integer.class)
-                .subscribe(new Consumer<Integer>() {
-                    @Override
-                    public void accept(@NonNull Integer integer) throws Exception {
-                        if (integer == 0) {
-                            vpGank.setCurrentItem(3);
-                        } else if (integer == 1) {
-                            vpGank.setCurrentItem(1);
-                        } else if (integer == 2) {
-                            vpGank.setCurrentItem(2);
-                        }
-                    }
-
-
-                });
+//        Subscription subscription = (Subscription) RxBus.getDefault().toObservable(RxCodeConstants.JUMP_TYPE, Integer.class)
+//                .subscribe(new Consumer<Integer>() {
+//                    @Override
+//                    public void accept(@NonNull Integer integer) throws Exception {
+//                        if (integer == 0) {
+//                            vpGank.setCurrentItem(3);
+//                        } else if (integer == 1) {
+//                            vpGank.setCurrentItem(1);
+//                        } else if (integer == 2) {
+//                            vpGank.setCurrentItem(2);
+//                        }
+//                    }
+//
+//
+//                });
     }
 
 

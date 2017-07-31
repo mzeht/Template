@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    >
 
         <LinearLayout
             android:id="@+id/personal_recommend"
@@ -20,7 +20,8 @@
                 <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="35dp">
+                    android:layout_marginStart="35dp"
+                    android:layout_marginLeft="35dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -97,7 +98,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="35dp"
-                    android:layout_alignParentRight="true">
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35dp">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -133,3 +135,4 @@
             android:layout_marginTop="13dp"
             android:background="@color/colorHomeLine" />
     </RelativeLayout>
+</layout>

@@ -1,26 +1,18 @@
 package com.wpmac.androidnougatframework.retrofit.base;
 
+import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.FieldNamingStrategy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.wpmac.androidnougatframework.BuildConfig;
+import com.wpmac.androidnougatframework.debug.L;
 import com.wpmac.androidnougatframework.retrofit.DoubanApi;
 import com.wpmac.androidnougatframework.retrofit.GankApi;
 import com.wpmac.androidnougatframework.retrofit.TingApi;
 
 import java.lang.reflect.Field;
-import java.security.SecureRandom;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 import java.util.concurrent.TimeUnit;
-
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSession;
-import javax.net.ssl.SSLSocketFactory;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -134,39 +126,42 @@ public class ApiManagment {
     private OkHttpClient getUnsafeOkHttpClient() {
 
         try {
-            final TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
-                @Override
-                public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
-                }
-
-                @Override
-                public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
-                }
-
-                @Override
-                public X509Certificate[] getAcceptedIssuers() {
-                    return new X509Certificate[]{};
-                }
-            }};
-            // Install the all-trusting trust manager
-            SSLContext sslContext = SSLContext.getInstance("TLS");
-            sslContext.init(null, trustAllCerts, new SecureRandom());
-            // Create an ssl socket factory with our all-trusting manager
-            SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
+//            final TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
+//                @Override
+//                public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+//                }
+//
+//                @Override
+//                public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+//                }
+//
+//                @Override
+//                public X509Certificate[] getAcceptedIssuers() {
+//                    return new X509Certificate[]{};
+//                }
+//            }};
+//            // Install the all-trusting trust manager
+//            SSLContext sslContext = SSLContext.getInstance("TLS");
+//            sslContext.init(null, trustAllCerts, new SecureRandom());
+//            // Create an ssl socket factory with our all-trusting manager
+//            SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
             OkHttpClient.Builder okBuilder = new OkHttpClient.Builder();
+            okBuilder.addInterceptor(getInterceptor());
             okBuilder.readTimeout(20, TimeUnit.SECONDS);
             okBuilder.connectTimeout(10, TimeUnit.SECONDS);
             okBuilder.writeTimeout(20, TimeUnit.SECONDS);
-            okBuilder.addInterceptor(new HttpHeadInterceptor());
-            okBuilder.addInterceptor(getInterceptor());
-            okBuilder.sslSocketFactory(sslSocketFactory);
-            okBuilder.hostnameVerifier(new HostnameVerifier() {
-                @Override
-                public boolean verify(String hostname, SSLSession session) {
-//                    Log.d("ApiManagment", "==come");
-                    return true;
-                }
-            });
+//            okBuilder.addInterceptor(new HttpHeadInterceptor());
+
+            okBuilder.networkInterceptors().add(new StethoInterceptor());
+//            okBuilder.sslSocketFactory(sslSocketFactory);
+//            okBuilder.hostnameVerifier(new HostnameVerifier() {
+//                @Override
+//                public boolean verify(String hostname, SSLSession session) {
+////                    Log.d("ApiManagment", "==come");
+//                    return true;
+//                }
+//            });
+
 
             return okBuilder.build();
         } catch (Exception e) {
@@ -176,7 +171,12 @@ public class ApiManagment {
 
     private Interceptor getInterceptor() {
 
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
+            @Override
+            public void log(String message) {
+                L.d("interceptor",message);
+            }
+        });
         if (BuildConfig.DEBUG) {
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY); // 测试
         } else {

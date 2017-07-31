@@ -3,6 +3,7 @@ package com.wpmac.androidnougatframework.base;
 import android.app.Application;
 import android.content.Context;
 
+import com.facebook.stetho.Stetho;
 import com.wpmac.androidnougatframework.utils.Utils;
 
 /**
@@ -27,6 +28,7 @@ public class BaseApplication extends Application {
         BasePreference.initialize(mContext);
 //        DBManager.initialize(mContext);
         Utils.init(mContext);
+        Stetho.initializeWithDefaults(this);
 
     }
 

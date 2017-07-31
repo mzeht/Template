@@ -1,5 +1,6 @@
 package com.wpmac.androidnougatframework.ui.gank;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,42 +11,34 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.xrecyclerview.XRecyclerView;
 import com.wpmac.androidnougatframework.R;
 import com.wpmac.androidnougatframework.base.BaseLoadFragment;
 import com.wpmac.androidnougatframework.bean.AndroidBean;
 import com.wpmac.androidnougatframework.constants.Constants;
+import com.wpmac.androidnougatframework.databinding.FooterItemEverydayBinding;
+import com.wpmac.androidnougatframework.databinding.FragmentEverydayBinding;
+import com.wpmac.androidnougatframework.databinding.HeaderItemEverydayBinding;
 import com.wpmac.androidnougatframework.http.cache.ACache;
 import com.wpmac.androidnougatframework.model.EverydayModel;
 import com.wpmac.androidnougatframework.multitype.EveryDayOneViewBinder;
 import com.wpmac.androidnougatframework.multitype.EveryDayTwoViewBinder;
 import com.wpmac.androidnougatframework.retrofit.base.ApiManagment;
-import com.wpmac.androidnougatframework.retrofit.po.FrontpageBean;
+import com.wpmac.androidnougatframework.retrofit.po.GankIoDayBean;
 import com.wpmac.androidnougatframework.rxbus.RxBus;
 import com.wpmac.androidnougatframework.rxbus.RxBusBaseMessage;
 import com.wpmac.androidnougatframework.rxbus.RxCodeConstants;
+import com.wpmac.androidnougatframework.rxutils.RxObservableUtils;
 import com.wpmac.androidnougatframework.utils.DebugUtil;
-import com.wpmac.androidnougatframework.utils.GlideImageLoader;
 import com.wpmac.androidnougatframework.utils.PerfectClickListener;
 import com.wpmac.androidnougatframework.utils.SPUtils;
 import com.wpmac.androidnougatframework.utils.TimeUtil;
-import com.youth.banner.Banner;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.observers.DisposableObserver;
-import io.reactivex.schedulers.Schedulers;
 import me.drakeet.multitype.ClassLinker;
 import me.drakeet.multitype.ItemViewBinder;
 import me.drakeet.multitype.Items;
@@ -62,15 +55,14 @@ import me.drakeet.multitype.MultiTypeAdapter;
  * 否：使用缓存 ： |无：请求今天数据
  * **********    |有：使用缓存
  */
-public class EverydayFragment extends BaseLoadFragment {
+public class EverydayFragment extends BaseLoadFragment<FragmentEverydayBinding> {
 
     private static final String TAG = "EverydayFragment";
     private ACache maCache;
     private ArrayList<List<AndroidBean>> mLists;
     private ArrayList<String> mBannerImages;
     private EverydayModel mEverydayModel;
-    private HeaderItemEverydayBinding mHeaderBinding=new HeaderItemEverydayBinding();
-    private IncludeEverydayBinding IncludeEverydayBinding=new IncludeEverydayBinding();
+    private HeaderItemEverydayBinding mHeaderBinding;//=new HeaderItemEverydayBinding();
     private FooterItemEverydayBinding mFooterBinding;
     private View mHeaderView;
     private View mFooterView;
@@ -85,41 +77,6 @@ public class EverydayFragment extends BaseLoadFragment {
     String month = getTodayTime().get(1);
     String day = getTodayTime().get(2);
 
-    @BindView(R.id.ll_loading)
-    LinearLayout llLoading;
-
-    @BindView(R.id.iv_loading)
-    ImageView ivLoading;
-
-    @BindView(R.id.xrv_everyday)
-    XRecyclerView xrvEveryday;
-
-
-    class HeaderItemEverydayBinding{
-
-        @BindView(R.id.banner)
-        Banner banner;
-
-        @BindView(R.id.include_everyday)
-        RelativeLayout includeEveryday;
-
-    }
-
-    class IncludeEverydayBinding {
-        @BindView(R.id.tv_daily_text)
-        TextView tvDailyText;
-
-        @BindView(R.id.ib_xiandu)
-        ImageButton ibXiandu;
-
-        @BindView(R.id.ib_movie_hot)
-        ImageButton ibMovieHot;
-
-    }
-
-    class FooterItemEverydayBinding{
-
-    }
 
     private Items mItems = new Items();
     private MultiTypeAdapter mMultiTypeAdapter = new MultiTypeAdapter();
@@ -131,38 +88,34 @@ public class EverydayFragment extends BaseLoadFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-//        showLoading();
         showContentView();
-        ButterKnife.bind(this, bindingView);
-
-        llLoading.setVisibility(View.VISIBLE);
+        bindingView.llLoading.setVisibility(View.VISIBLE);
         animation = new RotateAnimation(0f, 360f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         animation.setDuration(3000);//设置动画持续时间
         animation.setInterpolator(new LinearInterpolator());//不停顿
         animation.setRepeatCount(10);
-        ivLoading.setAnimation(animation);
+        bindingView.ivLoading.setAnimation(animation);
         animation.startNow();
+
+        maCache = ACache.get(getContext());
+        mEverydayModel = new EverydayModel();
         mBannerImages = (ArrayList<String>) maCache.getAsObject(Constants.BANNER_PIC);
         DebugUtil.error("----mBannerImages: " + (mBannerImages == null));
         DebugUtil.error("----mLists: " + (mLists == null));
-        mHeaderView = LayoutInflater.from(getActivity()).inflate(R.layout.header_item_everyday, null);
-//        mHeaderBinding = DataBindingUtil.inflate(LayoutInflater.from(getContext()), R.layout.header_item_everyday, null, false);
+
+        mHeaderBinding = DataBindingUtil.inflate(LayoutInflater.from(getContext()), R.layout.header_item_everyday, null, false);
         // 设置本地数据点击事件等
-        ButterKnife.bind(mHeaderBinding, mHeaderView);
-        ButterKnife.bind(IncludeEverydayBinding, mHeaderBinding.includeEveryday);
         initLocalSetting();
         initRecyclerView();
 
         mIsPrepared = true;
         /**
          * 因为启动时先走loadData()再走onActivityCreated，
-
-         maCache = ACache.get(getContext());
-         mEverydayModel = new EverydayModel();
          * 所以此处要额外调用load(),不然最初不会加载内容
          */
         loadData();
+
+
     }
 
     /**
@@ -194,45 +147,41 @@ public class EverydayFragment extends BaseLoadFragment {
         }
 
         String oneData = SPUtils.getString("everyday_data", "2016-11-26");
-        if (!oneData.equals(TimeUtil.getData())) {// 是第二天
-            if (TimeUtil.isRightTime()) {//大于12：30,请求
+        ApiManagment.getInstance().getGankApi().getGankIoDay(TimeUtil.getTodayTime().get(0), TimeUtil.getTodayTime().get(1), TimeUtil.getTodayTime().get(2))
+                .compose(RxObservableUtils.applySchedulers())
+                .compose(this.bindToLifecycle())
+                .subscribe(new DisposableObserver<GankIoDayBean>() {
+                    @Override
+                    public void onNext(@io.reactivex.annotations.NonNull GankIoDayBean gankIoDayBean) {
+//                        L.d(gankIoDayBean.toString());
+                    }
 
-                isOldDayRequest = false;
-                mEverydayModel.setData(getTodayTime().get(0), getTodayTime().get(1), getTodayTime().get(2));
-                showRotaLoading(true);
-                loadBannerPicture();
-                showContentData();
-            } else {// 小于，取缓存没有请求前一天
+                    @Override
+                    public void onError(@io.reactivex.annotations.NonNull Throwable e) {
 
-                ArrayList<String> lastTime = TimeUtil.getLastTime(getTodayTime().get(0), getTodayTime().get(1), getTodayTime().get(2));
-                mEverydayModel.setData(lastTime.get(0), lastTime.get(1), lastTime.get(2));
-                year = lastTime.get(0);
-                month = lastTime.get(1);
-                day = lastTime.get(2);
+                    }
 
-                isOldDayRequest = true;// 是昨天
-                getACacheData();
-            }
-        } else {// 当天，取缓存没有请求当天
+                    @Override
+                    public void onComplete() {
 
-            isOldDayRequest = false;
-            getACacheData();
-        }
+                    }
+                });
+
     }
 
     private void initLocalSetting() {
-        mEverydayModel.setData(getTodayTime().get(0), getTodayTime().get(1), getTodayTime().get(2));
+//        mEverydayModel.setData(getTodayTime().get(0), getTodayTime().get(1), getTodayTime().get(2));
 //        DebugUtil.error("" + year + month + day);
         // 显示日期,去掉第一位的"0"
-        IncludeEverydayBinding.tvDailyText.setText(getTodayTime().get(2).indexOf("0") == 0 ?
+        mHeaderBinding.includeEveryday.tvDailyText.setText(getTodayTime().get(2).indexOf("0") == 0 ?
                 getTodayTime().get(2).replace("0", "") : getTodayTime().get(2));
-        IncludeEverydayBinding.ibXiandu.setOnClickListener(new PerfectClickListener() {
+        mHeaderBinding.includeEveryday.ibXiandu.setOnClickListener(new PerfectClickListener() {
             @Override
             protected void onNoDoubleClick(View v) {
 //                WebViewActivity.loadUrl(v.getContext(), "https://gank.io/xiandu", "加载中...");
             }
         });
-        IncludeEverydayBinding.ibMovieHot.setOnClickListener(new PerfectClickListener() {
+        mHeaderBinding.includeEveryday.ibMovieHot.setOnClickListener(new PerfectClickListener() {
             @Override
             protected void onNoDoubleClick(View v) {
                 RxBus.getDefault().post(RxCodeConstants.JUMP_TYPE_TO_ONE, new RxBusBaseMessage());
@@ -244,22 +193,7 @@ public class EverydayFragment extends BaseLoadFragment {
      * 取缓存
      */
     private void getACacheData() {
-        if (!mIsFirst) {
-            return;
-        }
 
-        if (mBannerImages != null && mBannerImages.size() > 0) {
-            mHeaderBinding.banner.setImages(mBannerImages).setImageLoader(new GlideImageLoader()).start();
-        } else {
-            loadBannerPicture();
-        }
-        mLists = (ArrayList<List<AndroidBean>>) maCache.getAsObject(Constants.EVERYDAY_CONTENT);
-        if (mLists != null && mLists.size() > 0) {
-            setAdapter(mLists);
-        } else {
-            showRotaLoading(true);
-            showContentData();
-        }
     }
 
 
@@ -269,55 +203,8 @@ public class EverydayFragment extends BaseLoadFragment {
     private void showContentData() {
 
 
-        ApiManagment.getInstance().getTingApi().getFrontpage()
-                .observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io())
-                .subscribe(new DisposableObserver<FrontpageBean>() {
 
-                    @Override
-                    public void onError(Throwable e) {
-//                        listener.loadFailed();
-                    }
 
-                    @Override
-                    public void onComplete() {
-
-                    }
-
-                    @Override
-                    public void onNext(FrontpageBean frontpageBean) {
-
-                        frontpageBean.getResult().getFocus();
-
-//                        listener.loadSuccess(frontpageBean);
-                    }
-                });
-//        mEverydayModel.showRecyclerViewData(new RequestImpl() {
-//            @Override
-//            public void loadSuccess(Object object) {
-//                if (mLists != null) {
-//                    mLists.clear();
-//                }
-//                mLists = (ArrayList<List<AndroidBean>>) object;
-//                if (mLists.size() > 0 && mLists.get(0).size() > 0) {
-//                    setAdapter(mLists);
-//                } else {
-//                    requestBeforeData();
-//                }
-//            }
-//
-//            @Override
-//            public void loadFailed() {
-//                if (mLists != null && mLists.size() > 0) {
-//                    return;
-//                }
-//                showError();
-//            }
-//
-//            @Override
-//            public void addSubscription(Subscription subscription) {
-//                EverydayFragment.this.addSubscription(subscription);
-//            }
-//        });
     }
 
     /**
@@ -341,23 +228,26 @@ public class EverydayFragment extends BaseLoadFragment {
 
 
     private void initRecyclerView() {
-        xrvEveryday.setPullRefreshEnabled(false);
-        xrvEveryday.setLoadingMoreEnabled(false);
+
+
+
+        bindingView.xrvEveryday.setPullRefreshEnabled(false);
+        bindingView.xrvEveryday.setLoadingMoreEnabled(false);
         if (mHeaderView == null) {
-            mHeaderView = mHeaderView.getRootView();
-            xrvEveryday.addHeaderView(mHeaderView);
+            mHeaderView = mHeaderBinding.getRoot();
+            bindingView.xrvEveryday.addHeaderView(mHeaderView);
         }
         if (mFooterView == null) {
 
             mFooterView =  LayoutInflater.from(getActivity()).inflate(R.layout.footer_item_everyday, null);
-            xrvEveryday.addFootView(mFooterView, true);
-            xrvEveryday.noMoreLoading();
+            bindingView.xrvEveryday.addFootView(mFooterView, true);
+            bindingView.xrvEveryday.noMoreLoading();
         }
-        xrvEveryday.setLayoutManager(new LinearLayoutManager(getContext()));
+        bindingView.xrvEveryday.setLayoutManager(new LinearLayoutManager(getContext()));
         // 需加，不然滑动不流畅
-        xrvEveryday.setNestedScrollingEnabled(false);
-        xrvEveryday.setHasFixedSize(false);
-        xrvEveryday.setItemAnimator(new DefaultItemAnimator());
+        bindingView.xrvEveryday.setNestedScrollingEnabled(false);
+        bindingView.xrvEveryday.setHasFixedSize(false);
+        bindingView.xrvEveryday.setItemAnimator(new DefaultItemAnimator());
     }
 
     private void setAdapter(ArrayList<List<AndroidBean>> lists) {
@@ -371,7 +261,6 @@ public class EverydayFragment extends BaseLoadFragment {
         mMultiTypeAdapter.register(AndroidBean.class).
                 to(new EveryDayOneViewBinder(), new EveryDayTwoViewBinder())
                 .withClassLinker(new ClassLinker<AndroidBean>() {
-                    @NonNull
                     @Override
                     public Class<? extends ItemViewBinder<AndroidBean, ?>> index(@NonNull AndroidBean androidBean) {
                         return null;
@@ -397,7 +286,7 @@ public class EverydayFragment extends BaseLoadFragment {
         }
         mIsFirst = false;
 
-        xrvEveryday.setAdapter(mMultiTypeAdapter);
+        bindingView.xrvEveryday.setAdapter(mMultiTypeAdapter);
         mMultiTypeAdapter.notifyDataSetChanged();
     }
 
@@ -413,7 +302,7 @@ public class EverydayFragment extends BaseLoadFragment {
     public void onResume() {
         super.onResume();
         // 失去焦点，否则RecyclerView第一个item会回到顶部
-        xrvEveryday.setFocusable(false);
+        bindingView.xrvEveryday.setFocusable(false);
         DebugUtil.error("-----EverydayFragment----onResume()");
         // 开始图片请求
         Glide.with(getActivity()).resumeRequests();
@@ -477,12 +366,10 @@ public class EverydayFragment extends BaseLoadFragment {
 
     private void showRotaLoading(boolean isLoading) {
         if (isLoading) {
-            llLoading.setVisibility(View.VISIBLE);
-            xrvEveryday.setVisibility(View.GONE);
+            bindingView.xrvEveryday.setVisibility(View.GONE);
             animation.startNow();
         } else {
-            llLoading.setVisibility(View.GONE);
-            xrvEveryday.setVisibility(View.VISIBLE);
+            bindingView.xrvEveryday.setVisibility(View.VISIBLE);
             animation.cancel();
         }
     }

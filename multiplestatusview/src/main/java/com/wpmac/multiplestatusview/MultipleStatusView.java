@@ -3,6 +3,7 @@ package com.wpmac.multiplestatusview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -156,7 +157,8 @@ public class MultipleStatusView extends RelativeLayout {
                 mContentView = mInflater.inflate(mContentViewResId, null);
                 addView(mContentView, 0, mLayoutParams);
             } else {
-                mContentView = findViewById(R.id.content_view);
+                mContentView = this.getChildAt(0);
+                Log.d("child count", this.getChildCount()+"");
             }
         }
         showViewByStatus(mViewStatus);

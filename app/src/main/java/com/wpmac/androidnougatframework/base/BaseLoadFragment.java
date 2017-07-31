@@ -1,6 +1,8 @@
 package com.wpmac.androidnougatframework.base;
 
 
+import android.databinding.DataBindingUtil;
+import android.databinding.ViewDataBinding;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,11 +21,11 @@ import com.wpmac.androidnougatframework.utils.PerfectClickListener;
  * @author: wpmac  Date: 2017/5/22 Time: 上午1:35
  * @email: mzeht8303@gamil.com
  */
-public abstract class BaseLoadFragment extends RxFragment {
+public abstract class BaseLoadFragment<SV extends ViewDataBinding>  extends RxFragment {
 
-
-    protected View bindingView;
-
+    // 布局view
+    protected SV bindingView;
+    // fragment是否显示了
     protected boolean mIsVisible = false;
     // 加载中
     private LinearLayout mLlProgressBar;
@@ -33,28 +35,19 @@ public abstract class BaseLoadFragment extends RxFragment {
     protected RelativeLayout mContainer;
     // 动画
     private AnimationDrawable mAnimationDrawable;
-
-    private boolean isAddeded;
-
-    public void setIsAddeded(boolean arg0){
-        isAddeded = arg0;
-    }
-
-    public boolean isAddeded() {
-        return isAddeded || super.isAdded();
-    }
+//    private CompositeSubscription mCompositeSubscription;
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View ll = inflater.inflate(R.layout.fragment_base, null);
+        bindingView = DataBindingUtil.inflate(getActivity().getLayoutInflater(), setContent(), null, false);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        bindingView.getRoot().setLayoutParams(params);
         mContainer = (RelativeLayout) ll.findViewById(R.id.container);
-        bindingView =inflater.inflate(setContent(), null);
-        mContainer.addView(bindingView);
+        mContainer.addView(bindingView.getRoot());
         return ll;
     }
-
-
 
     /**
      * 在这里实现Fragment数据的缓加载.
@@ -108,7 +101,7 @@ public abstract class BaseLoadFragment extends RxFragment {
                 onRefresh();
             }
         });
-        bindingView.setVisibility(View.GONE);
+        bindingView.getRoot().setVisibility(View.GONE);
 
     }
 
@@ -139,8 +132,8 @@ public abstract class BaseLoadFragment extends RxFragment {
         if (!mAnimationDrawable.isRunning()) {
             mAnimationDrawable.start();
         }
-        if (bindingView.getVisibility() != View.GONE) {
-            bindingView.setVisibility(View.GONE);
+        if (bindingView.getRoot().getVisibility() != View.GONE) {
+            bindingView.getRoot().setVisibility(View.GONE);
         }
         if (mRefresh.getVisibility() != View.GONE) {
             mRefresh.setVisibility(View.GONE);
@@ -161,8 +154,8 @@ public abstract class BaseLoadFragment extends RxFragment {
         if (mRefresh.getVisibility() != View.GONE) {
             mRefresh.setVisibility(View.GONE);
         }
-        if (bindingView.getVisibility() != View.VISIBLE) {
-            bindingView.setVisibility(View.VISIBLE);
+        if (bindingView.getRoot().getVisibility() != View.VISIBLE) {
+            bindingView.getRoot().setVisibility(View.VISIBLE);
         }
     }
 
@@ -180,9 +173,30 @@ public abstract class BaseLoadFragment extends RxFragment {
         if (mRefresh.getVisibility() != View.VISIBLE) {
             mRefresh.setVisibility(View.VISIBLE);
         }
-        if (bindingView.getVisibility() != View.GONE) {
-            bindingView.setVisibility(View.GONE);
+        if (bindingView.getRoot().getVisibility() != View.GONE) {
+            bindingView.getRoot().setVisibility(View.GONE);
         }
+    }
+
+//    public void addSubscription(Subscription s) {
+//        if (this.mCompositeSubscription == null) {
+//            this.mCompositeSubscription = new CompositeSubscription();
+//        }
+//        this.mCompositeSubscription.add(s);
+//    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+//        if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
+//            this.mCompositeSubscription.unsubscribe();
+//        }
+    }
+
+    public void removeSubscription() {
+//        if (this.mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions()) {
+//            this.mCompositeSubscription.unsubscribe();
+//        }
     }
 
 

@@ -7,14 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.wpmac.template.R;
-import com.wpmac.template.bean.AndroidBean;
 
 import me.drakeet.multitype.ItemViewBinder;
 
 /**
  * Created by Administrator on 2017/7/4.
  */
-public class EveryDayTitleViewBinder extends ItemViewBinder<AndroidBean, EveryDayTitleViewBinder.ViewHolder> {
+public class EveryDayTitleViewBinder extends ItemViewBinder<EveryDayTitle, EveryDayTitleViewBinder.ViewHolder> {
 
     @NonNull
     @Override
@@ -25,7 +24,7 @@ public class EveryDayTitleViewBinder extends ItemViewBinder<AndroidBean, EveryDa
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull ViewHolder holder, @NonNull AndroidBean everyDayTitle) {
+    protected void onBindViewHolder(@NonNull ViewHolder holder, @NonNull EveryDayTitle everyDayTitle) {
 
     }
 

@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 import com.wpmac.template.R;
 import com.wpmac.template.base.BaseLoadFragment;
 import com.wpmac.template.bean.AndroidBean;
+import com.wpmac.template.bean.GankBean;
 import com.wpmac.template.constants.Constants;
 import com.wpmac.template.databinding.FooterItemEverydayBinding;
 import com.wpmac.template.databinding.FragmentEverydayBinding;
@@ -24,10 +25,12 @@ import com.wpmac.template.debug.L;
 import com.wpmac.template.http.cache.ACache;
 import com.wpmac.template.model.EverydayModel;
 import com.wpmac.template.multitype.EveryDayOneViewBinder;
+import com.wpmac.template.multitype.EveryDayThreeViewBinder;
+import com.wpmac.template.multitype.EveryDayTitle;
+import com.wpmac.template.multitype.EveryDayTitleViewBinder;
 import com.wpmac.template.multitype.EveryDayTwoViewBinder;
 import com.wpmac.template.retrofit.base.ApiManagment;
 import com.wpmac.template.retrofit.po.FrontpageBean;
-import com.wpmac.template.retrofit.po.GankIoDayBean;
 import com.wpmac.template.rxbus.RxBus;
 import com.wpmac.template.rxbus.RxBusBaseMessage;
 import com.wpmac.template.rxbus.RxCodeConstants;
@@ -42,16 +45,11 @@ import com.youth.banner.listener.OnBannerClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.reactivex.Observable;
-import io.reactivex.ObservableSource;
-import io.reactivex.functions.Function;
 import io.reactivex.observers.DisposableObserver;
 import me.drakeet.multitype.ClassLinker;
 import me.drakeet.multitype.ItemViewBinder;
 import me.drakeet.multitype.Items;
 import me.drakeet.multitype.MultiTypeAdapter;
-
-import static com.wpmac.template.model.EverydayModel.addUrlList;
 
 
 /**
@@ -107,7 +105,7 @@ public class EverydayFragment extends BaseLoadFragment<FragmentEverydayBinding> 
         animation.startNow();
 
         maCache = ACache.get(getContext());
-        mEverydayModel = new EverydayModel();
+//        mEverydayModel = new EverydayModel();
 //        mBannerImages = (ArrayList<String>) maCache.getAsObject(Constants.BANNER_PIC);
         DebugUtil.error("----mBannerImages: " + (mBannerImages == null));
         DebugUtil.error("----mLists: " + (mLists == null));
@@ -192,7 +190,9 @@ public class EverydayFragment extends BaseLoadFragment<FragmentEverydayBinding> 
      *加载banner
      */
     private void loadBannerPicture() {
-        ApiManagment.getInstance().getTingApi().getFrontpage().compose(RxObservableUtils.applySchedulers())
+        ApiManagment.getInstance()
+                .getTingApi().getFrontpage()
+                .compose(RxObservableUtils.applySchedulers())
                 .compose(this.bindToLifecycle())
                 .subscribe(new DisposableObserver<FrontpageBean>() {
                     @Override
@@ -244,55 +244,56 @@ public class EverydayFragment extends BaseLoadFragment<FragmentEverydayBinding> 
         String oneData = SPUtils.getString("everyday_data", "2016-11-26");
         ApiManagment.getInstance().getGankApi().getGankIoDay(TimeUtil.getTodayTime().get(0), TimeUtil.getTodayTime().get(1), TimeUtil.getTodayTime().get(2))
                 .compose(RxObservableUtils.applySchedulers())
-                .concatMap(new Function<GankIoDayBean, ObservableSource<List<List<AndroidBean>>>>() {
-                    @Override
-                    public ObservableSource<List<List<AndroidBean>>> apply(@io.reactivex.annotations.NonNull GankIoDayBean gankIoDayBean) throws Exception {
-                        List<List<AndroidBean>> lists = new ArrayList<>();
-                        GankIoDayBean.ResultsBean results = gankIoDayBean.getResults();
-
-                        if (results.getAndroid() != null && results.getAndroid().size() > 0) {
-                            addUrlList(lists, results.getAndroid(), "Android");
-                        }
-                        if (results.getWelfare() != null && results.getWelfare().size() > 0) {
-                            addUrlList(lists, results.getWelfare(), "福利");
-                        }
-                        if (results.getIos() != null && results.getIos().size() > 0) {
-                            addUrlList(lists, results.getIos(), "IOS");
-                        }
-                        if (results.getRestMovie() != null && results.getRestMovie().size() > 0) {
-                            addUrlList(lists, results.getRestMovie(), "休息视频");
-                        }
-                        if (results.getResource() != null && results.getResource().size() > 0) {
-                            addUrlList(lists, results.getResource(), "拓展资源");
-                        }
-                        if (results.getRecommend() != null && results.getRecommend().size() > 0) {
-                            addUrlList(lists, results.getRecommend(), "瞎推荐");
-                        }
-                        if (results.getFront() != null && results.getFront().size() > 0) {
-                            addUrlList(lists, results.getFront(), "前端");
-                        }
-                        if (results.getApp() != null && results.getApp().size() > 0) {
-                            addUrlList(lists, results.getApp(), "App");
-                        }
-
-                        return Observable.just(lists);
-                    }
-                })
+//                .concatMap(new Function<GankBean, ObservableSource<List<List<AndroidBean>>>>() {
+//                    @Override
+//                    public ObservableSource<List<List<AndroidBean>>> apply(@io.reactivex.annotations.NonNull GankIoDayBean gankIoDayBean) throws Exception {
+//                        List<List<AndroidBean>> lists = new ArrayList<>();
+//                        GankIoDayBean.ResultsBean results = gankIoDayBean.getResults();
+//
+//                        if (results.getAndroid() != null && results.getAndroid().size() > 0) {
+//                            addUrlList(lists, results.getAndroid(), "Android");
+//                        }
+//                        if (results.getWelfare() != null && results.getWelfare().size() > 0) {
+//                            addUrlList(lists, results.getWelfare(), "福利");
+//                        }
+//                        if (results.getIos() != null && results.getIos().size() > 0) {
+//                            addUrlList(lists, results.getIos(), "IOS");
+//                        }
+//                        if (results.getRestMovie() != null && results.getRestMovie().size() > 0) {
+//                            addUrlList(lists, results.getRestMovie(), "休息视频");
+//                        }
+//                        if (results.getResource() != null && results.getResource().size() > 0) {
+//                            addUrlList(lists, results.getResource(), "拓展资源");
+//                        }
+//                        if (results.getRecommend() != null && results.getRecommend().size() > 0) {
+//                            addUrlList(lists, results.getRecommend(), "瞎推荐");
+//                        }
+//                        if (results.getFront() != null && results.getFront().size() > 0) {
+//                            addUrlList(lists, results.getFront(), "前端");
+//                        }
+//                        if (results.getApp() != null && results.getApp().size() > 0) {
+//                            addUrlList(lists, results.getApp(), "App");
+//                        }
+//
+//                        return Observable.just(lists);
+//                    }
+//                })
                 .compose(this.bindToLifecycle())
-                .subscribe(new DisposableObserver<List<List<AndroidBean>>>() {
+                .subscribe(new DisposableObserver<GankBean>() {
 
                     @Override
-                    public void onNext(@io.reactivex.annotations.NonNull List<List<AndroidBean>> lists) {
-                        L.d("AndroidBean lists"+lists.size());
-                        if (mLists != null) {
-                            mLists.clear();
+                    public void onNext(@io.reactivex.annotations.NonNull GankBean gankBean) {
+//                        L.d("AndroidBean lists"+gankBean.size());
+//                        if (mLists != null) {
+//                            mLists.clear();
+//                        }
+//                        mLists = (ArrayList<List<AndroidBean>>) lists;
+                        if (gankBean.getResults()!=null) {
+                            setAdapter(gankBean.getResults());
                         }
-                        mLists = (ArrayList<List<AndroidBean>>) lists;
-                        if (mLists.size() > 0 && mLists.get(0).size() > 0) {
-                            setAdapter(mLists);
-                        } else {
-                            requestBeforeData();
-                        }
+//                        else {
+//                            requestBeforeData();
+//                        }
                     }
 
                     @Override
@@ -320,7 +321,7 @@ public class EverydayFragment extends BaseLoadFragment<FragmentEverydayBinding> 
     private void requestBeforeData() {
         mLists = (ArrayList<List<AndroidBean>>) maCache.getAsObject(Constants.EVERYDAY_CONTENT);
         if (mLists != null && mLists.size() > 0) {
-            setAdapter(mLists);
+//            setAdapter(mLists);
         } else {
             // 一直请求，知道请求到数据为止
             ArrayList<String> lastTime = TimeUtil.getLastTime(year, month, day);
@@ -328,7 +329,7 @@ public class EverydayFragment extends BaseLoadFragment<FragmentEverydayBinding> 
             year = lastTime.get(0);
             month = lastTime.get(1);
             day = lastTime.get(2);
-            showContentData();
+//            showContentData();
         }
     }
 
@@ -357,41 +358,52 @@ public class EverydayFragment extends BaseLoadFragment<FragmentEverydayBinding> 
         bindingView.xrvEveryday.setItemAnimator(new DefaultItemAnimator());
     }
 
-    private void setAdapter(ArrayList<List<AndroidBean>> lists) {
+    private void setAdapter(GankBean.ResultsBean lists) {
         showRotaLoading(false);
         if (mMultiTypeAdapter == null) {
             mMultiTypeAdapter = new MultiTypeAdapter();
         } else {
 
         }
-        mMultiTypeAdapter.setItems(mItems);
-        mMultiTypeAdapter.register(AndroidBean.class).
-                to(new EveryDayOneViewBinder(), new EveryDayTwoViewBinder())
-                .withClassLinker(new ClassLinker<AndroidBean>() {
+
+        mMultiTypeAdapter.register(GankBean.ResultsBean.ContentBean.class).
+                to(new EveryDayOneViewBinder(), new EveryDayTwoViewBinder(),new EveryDayThreeViewBinder())
+                .withClassLinker(new ClassLinker<GankBean.ResultsBean.ContentBean>() {
                     @Override
-                    public Class<? extends ItemViewBinder<AndroidBean, ?>> index(@NonNull AndroidBean androidBean) {
-                        return null;
+                    public Class<? extends ItemViewBinder<GankBean.ResultsBean.ContentBean, ?>> index(@NonNull GankBean.ResultsBean.ContentBean contentBean) {
+                        switch (contentBean.getMSimpleBeanList().size()) {
+                            case 1:
+                                return EveryDayOneViewBinder.class;
+                            case 2:
+                                return EveryDayTwoViewBinder.class;
+                            case 3:
+                                return EveryDayThreeViewBinder.class;
+                            default:
+                                return EveryDayThreeViewBinder.class;
+
+                        }
                     }
+
                 });
+        mMultiTypeAdapter.register(EveryDayTitle.class, new EveryDayTitleViewBinder());
+        mItems.clear();
+        List<GankBean.ResultsBean.ContentBean> contentBeanList = new ArrayList<GankBean.ResultsBean.ContentBean>();
+        contentBeanList.add(lists.getAndroid());
+        contentBeanList.add(lists.getApp());
+        contentBeanList.add(lists.getFront());
+        mItems.addAll(contentBeanList);
+        mMultiTypeAdapter.setItems(mItems);
 
-        mItems.addAll(lists);
-//        mEverydayAdapter.addAll(lists);
-//        DebugUtil.error("----111111 ");
-//        xrvEveryday.setAdapter(mEverydayAdapter);
-//        mEverydayAdapter.notifyDataSetChanged();
-//        DebugUtil.error("----222222 ");
-        maCache.remove(Constants.EVERYDAY_CONTENT);
-        // 缓存三天，这样就可以取到缓存了！
-        maCache.put(Constants.EVERYDAY_CONTENT, lists, 259200);
 
-        if (isOldDayRequest) {
-            ArrayList<String> lastTime = TimeUtil.getLastTime(getTodayTime().get(0), getTodayTime().get(1), getTodayTime().get(2));
-            SPUtils.putString("everyday_data", lastTime.get(0) + "-" + lastTime.get(1) + "-" + lastTime.get(2));
-        } else {
-            // 保存请求的日期
-            SPUtils.putString("everyday_data", TimeUtil.getData());
-        }
-        mIsFirst = false;
+
+//        if (isOldDayRequest) {
+//            ArrayList<String> lastTime = TimeUtil.getLastTime(getTodayTime().get(0), getTodayTime().get(1), getTodayTime().get(2));
+//            SPUtils.putString("everyday_data", lastTime.get(0) + "-" + lastTime.get(1) + "-" + lastTime.get(2));
+//        } else {
+//            // 保存请求的日期
+//            SPUtils.putString("everyday_data", TimeUtil.getData());
+//        }
+//        mIsFirst = false;
 
         bindingView.xrvEveryday.setAdapter(mMultiTypeAdapter);
         mMultiTypeAdapter.notifyDataSetChanged();
@@ -400,9 +412,9 @@ public class EverydayFragment extends BaseLoadFragment<FragmentEverydayBinding> 
     @Override
     protected void onInvisible() {
         // 不可见时轮播图停止滚动
-        if (mHeaderBinding != null && mHeaderBinding.banner != null) {
-            mHeaderBinding.banner.stopAutoPlay();
-        }
+//        if (mHeaderBinding != null && mHeaderBinding.banner != null) {
+//            mHeaderBinding.banner.stopAutoPlay();
+//        }
     }
 
     @Override

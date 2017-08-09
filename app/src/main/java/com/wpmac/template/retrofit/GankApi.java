@@ -1,7 +1,7 @@
 package com.wpmac.template.retrofit;
 
 
-import com.wpmac.template.retrofit.po.GankIoDayBean;
+import com.wpmac.template.bean.GankBean;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -32,6 +32,6 @@ public interface GankApi {
      * eg:http://gank.io/api/day/2015/08/06
      */
     @GET("day/{year}/{month}/{day}")
-    Observable<GankIoDayBean> getGankIoDay(@Path("year") String year, @Path("month") String month, @Path("day") String day);
+    Observable<GankBean> getGankIoDay(@Path("year") String year, @Path("month") String month, @Path("day") String day);
 
 }

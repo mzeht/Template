@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/Template/xrecyclerview/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/Users/wpmac/.android/build-cache/44c04526ad727abb6ad5eaa506482d2d6401a2d9/output/res/layout-sw600dp-v13/design_layout_snackbar.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "D:\\Users\\wpmac\\.android\\build-cache\\44c04526ad727abb6ad5eaa506482d2d6401a2d9\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
     },
     {
-        "merged": "/Users/wpmac/AndroidStudioProjects/Template/D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
-        "source": "/Users/wpmac/AndroidStudioProjects/Template/C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
     }
 ]

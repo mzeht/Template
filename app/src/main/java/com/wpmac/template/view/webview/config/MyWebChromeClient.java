@@ -9,8 +9,8 @@ import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.view.webview.WebViewActivity;
+import com.wpmac.template.R;
+import com.wpmac.template.view.webview.WebViewActivity;
 
 import static android.app.Activity.RESULT_OK;
 

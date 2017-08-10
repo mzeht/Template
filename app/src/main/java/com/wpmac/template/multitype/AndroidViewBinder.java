@@ -14,6 +14,7 @@ import com.wpmac.template.R;
 import com.wpmac.template.retrofit.po.GankIoDataBean;
 import com.wpmac.template.utils.ImgLoadUtil;
 import com.wpmac.template.utils.TimeUtil;
+import com.wpmac.template.view.webview.WebViewActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -78,7 +79,7 @@ public class AndroidViewBinder extends ItemViewBinder<GankIoDataBean.ResultBean,
         holder.llAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                WebViewActivity.loadUrl(v.getContext(), object.getUrl(), "加载中...");
+                WebViewActivity.loadUrl(v.getContext(), resultsBean.getUrl(), "加载中...");
             }
         });
     }

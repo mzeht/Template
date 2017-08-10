@@ -149,9 +149,7 @@ public class AndroidFragment extends BaseLoadFragment<FragmentAndroidBinding> {
 
                         bindingView.xrvAndroid.refreshComplete();
                         // 注意：这里不能写成 mPage == 1，否则会一直显示错误页面
-                        if (mMultiTypeAdapter.getItemCount() == 0) {
-                            showError();
-                        }
+                        showError();
                         if (mPage > 1) {
                             mPage--;
                         }

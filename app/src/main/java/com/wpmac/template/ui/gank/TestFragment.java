@@ -6,12 +6,6 @@ import android.support.annotation.Nullable;
 import com.wpmac.template.R;
 import com.wpmac.template.base.BaseLoadFragment;
 import com.wpmac.template.databinding.FragmentTestBinding;
-import com.wpmac.template.retrofit.base.ApiManagment;
-import com.wpmac.template.retrofit.po.FrontpageBean;
-import com.wpmac.template.rxutils.RxObservableUtils;
-
-import io.reactivex.annotations.NonNull;
-import io.reactivex.observers.DisposableObserver;
 
 /**
  * Created by Administrator on 2017/8/9.
@@ -48,27 +42,28 @@ public class TestFragment extends BaseLoadFragment<FragmentTestBinding> {
         if(!isPrepared || !mIsVisible) {
             return;
         }
-        ApiManagment.getInstance()
-                .getTingApi().getFrontpage()
-                .compose(RxObservableUtils.applySchedulers())
-                .compose(this.bindToLifecycle())
-                .subscribe(new DisposableObserver<FrontpageBean>() {
-                    @Override
-                    public void onNext(@NonNull FrontpageBean frontpageBean) {
-                        showContentView();
-                    }
+//        ApiManagment.getInstance()
+//                .getTingApi().getFrontpage()
+//                .compose(RxObservableUtils.applySchedulers())
+//                .compose(this.bindToLifecycle())
+//                .subscribe(new DisposableObserver<FrontpageBean>() {
+//                    @Override
+//                    public void onNext(@NonNull FrontpageBean frontpageBean) {
+//                        showContentView();
+//                    }
+//
+//                    @Override
+//                    public void onError(@NonNull Throwable e) {
+//
+//                    }
+//
+//                    @Override
+//                    public void onComplete() {
+//
+//                    }
+//                });
 
-                    @Override
-                    public void onError(@NonNull Throwable e) {
-
-                    }
-
-                    @Override
-                    public void onComplete() {
-
-                    }
-                });
-
+            showContentView();
 
 
     }

@@ -15,6 +15,7 @@ import android.widget.RelativeLayout;
 
 import com.trello.rxlifecycle2.components.support.RxFragment;
 import com.wpmac.template.R;
+import com.wpmac.template.debug.L;
 import com.wpmac.template.utils.PerfectClickListener;
 
 /**
@@ -40,6 +41,7 @@ public abstract class BaseLoadFragment<SV extends ViewDataBinding>  extends RxFr
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        L.d("onCreateView");
         View ll = inflater.inflate(R.layout.fragment_base, null);
         bindingView = DataBindingUtil.inflate(getActivity().getLayoutInflater(), setContent(), null, false);
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
@@ -83,6 +85,7 @@ public abstract class BaseLoadFragment<SV extends ViewDataBinding>  extends RxFr
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        L.d("onActivityCreated");
         mLlProgressBar = getView(R.id.ll_progress_bar);
         ImageView img = getView(R.id.img_progress);
 

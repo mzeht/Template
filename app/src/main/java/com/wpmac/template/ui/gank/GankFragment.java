@@ -56,13 +56,13 @@ public class GankFragment extends BaseLoadFragment<FragmentGankBinding> {
         mTitleList.add("福利");
         mTitleList.add("干货订制");
         mTitleList.add("大安卓");
-        mFragments.add(new EverydayFragment());
         mFragments.add(TestFragment.newInstance());
         mFragments.add(TestFragment.newInstance());
         mFragments.add(TestFragment.newInstance());
+//        mFragments.add(com.wpmac.androidnougatframework.ui.gank.AndroidFragment.newInstance());
 //        mFragments.add(new WelfareFragment());
 //        mFragments.add(new CustomFragment());
-//        mFragments.add(AndroidFragment.newInstance("Android"));
+        mFragments.add(AndroidFragment.newInstance("Android"));
     }
 
     /**

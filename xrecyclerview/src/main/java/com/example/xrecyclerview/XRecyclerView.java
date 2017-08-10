@@ -130,7 +130,7 @@ public class XRecyclerView extends RecyclerView {
     }
 
     public void refreshComplete() {
-        //  mRefreshHeader.refreshComplate();
+//          mRefreshHeader.refreshComplate();
         if (isLoadingData) {
             loadMoreComplete();
         } else {

@@ -1,95 +1,31 @@
 [
     {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "D:\\Users\\wpmac\\.android\\build-cache\\44c04526ad727abb6ad5eaa506482d2d6401a2d9\\output\\res\\drawable-v21\\avd_hide_password.xml"
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
     },
     {
         "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\drawable-v21\\avd_hide_password.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "D:\\Users\\wpmac\\.android\\build-cache\\44c04526ad727abb6ad5eaa506482d2d6401a2d9\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\drawable-v21\\avd_hide_password.xml"
     },
     {
         "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "D:\\Users\\wpmac\\.android\\build-cache\\44c04526ad727abb6ad5eaa506482d2d6401a2d9\\output\\res\\drawable-v21\\avd_show_password.xml"
+        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
         "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\drawable-v21\\design_password_eye.xml"
     },
     {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\drawable-v21\\design_password_eye.xml"
-    },
-    {
         "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "D:\\Users\\wpmac\\.android\\build-cache\\6518ed28c50ab5fc7d94c78c9f5691a26cae39d4\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
-        "source": "D:\\Users\\wpmac\\.android\\build-cache\\44c04526ad727abb6ad5eaa506482d2d6401a2d9\\output\\res\\drawable-v21\\design_password_eye.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
-        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\drawable-v21\\avd_show_password.xml"
-    },
-    {
-        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\drawable-v21\\avd_hide_password.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
-        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
-    },
-    {
-        "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\8f66171c211c2a5b6b9f97e49397e3a1995a32b8\\output\\res\\drawable-v21\\notification_action_background.xml"
     },
     {
         "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",

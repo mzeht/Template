@@ -99,7 +99,7 @@ public class WrapAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (adapter != null) {
             adapterCount = adapter.getItemCount();
             if (adjPosition < adapterCount) {
-                adapter.onBindViewHolder(holder, adjPosition);
+                adapter.onBindViewHolder(holder, adjPosition,null);
                 return;
             }
         }
@@ -125,10 +125,14 @@ public class WrapAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         if (isFooter(position)) {
             return TYPE_FOOTER;
         }
+//        Log.d("position", position+"");
+//        Log.d("getHeadersCount", getHeadersCount()+"");
         int adjPosition = position - getHeadersCount();
         int adapterCount;
         if (adapter != null) {
             adapterCount = adapter.getItemCount();
+//            Log.d("adapterCount",adapterCount+"");
+//            Log.d("adjPosition",adjPosition+"");
             if (adjPosition < adapterCount) {
                 return adapter.getItemViewType(adjPosition);
             }

@@ -39,6 +39,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiManagment {
 
     private static ApiManagment instance;
+
+    /**
+     * 分页数据，每页的数量
+     */
+    public static int per_page = 10;
+    public static int per_page_more = 20;
     private Gson gson;
     public static String BASE_URL = "http://222.222.222.222:8080";
     // gankio、豆瓣、（轮播图）

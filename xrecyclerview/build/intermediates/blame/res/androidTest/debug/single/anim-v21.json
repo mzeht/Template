@@ -1,21 +1,5 @@
 [
     {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "D:\\Users\\wpmac\\.android\\build-cache\\44c04526ad727abb6ad5eaa506482d2d6401a2d9\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
-    },
-    {
-        "merged": "D:\\Users\\wpmac\\AndroidStudioProjects\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "D:\\Users\\wpmac\\.android\\build-cache\\44c04526ad727abb6ad5eaa506482d2d6401a2d9\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
-    },
-    {
         "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     },

@@ -79,7 +79,7 @@ public class AndroidViewBinder extends ItemViewBinder<GankIoDataBean.ResultBean,
         holder.llAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                WebViewActivity.loadUrl(v.getContext(), resultsBean.getUrl(), "加载中...");
+                WebViewActivity.loadUrl(v.getContext(),resultsBean.getDesc(), resultsBean.getUrl(), "加载中...");
             }
         });
     }

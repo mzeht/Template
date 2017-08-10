@@ -45,10 +45,12 @@ public class  WebViewActivity extends AppCompatActivity implements IWebPageView 
     public boolean mPageFinish;
     // 加载视频相关
     private MyWebChromeClient mWebChromeClient;
-    // title
+    // title url
     private String mTitle;
     // 网页链接
     private String mUrl;
+    // 描述
+    private String mDesc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +90,12 @@ public class  WebViewActivity extends AppCompatActivity implements IWebPageView 
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.actionbar_share:// 分享到
-                        String shareText = mWebChromeClient.getTitle() + mUrl + "（分享自云阅）";
+                        String shareText = "";
+                        if (mWebChromeClient.getTitle().contains(mDesc)) {
+                            shareText=mWebChromeClient.getTitle()+ mUrl + "（分享自readme）";
+                        }else{
+                            shareText = mDesc+"==>"+mWebChromeClient.getTitle() + mUrl + "（分享自readme）";
+                        }
                         ShareUtils.share(WebViewActivity.this, shareText);
                         break;
                     case R.id.actionbar_cope:// 复制链接
@@ -114,6 +121,7 @@ public class  WebViewActivity extends AppCompatActivity implements IWebPageView 
         if (getIntent() != null) {
             mTitle = getIntent().getStringExtra("mTitle");
             mUrl = getIntent().getStringExtra("mUrl");
+            mDesc = getIntent().getStringExtra("mDesc");
         }
     }
 
@@ -371,10 +379,11 @@ public class  WebViewActivity extends AppCompatActivity implements IWebPageView 
      * @param mUrl     要加载的网页url
      * @param mTitle   title
      */
-    public static void loadUrl(Context mContext, String mUrl, String mTitle) {
+    public static void loadUrl(Context mContext, String desc,String mUrl, String mTitle) {
         Intent intent = new Intent(mContext, WebViewActivity.class);
         intent.putExtra("mUrl", mUrl);
         intent.putExtra("mTitle", mTitle);
+        intent.putExtra("mDesc", desc);
         mContext.startActivity(intent);
     }
 }

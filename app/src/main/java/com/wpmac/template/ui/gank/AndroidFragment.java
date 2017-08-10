@@ -103,7 +103,7 @@ public class AndroidFragment extends BaseLoadFragment<FragmentAndroidBinding> {
 //                && mAndroidBean.getResults() != null
 //                && mAndroidBean.getResults().size() > 0) {
 //            showContentView();
-////            mAndroidBean = (GankIoDataBean) mACache.getAsObject(Constants.GANK_ANDROID);
+//            mAndroidBean = (GankIoDataBean) mACache.getAsObject(Constants.GANK_ANDROID);
 //            setAdapter(mAndroidBean);
 //        } else {
 //            loadAndroidData();

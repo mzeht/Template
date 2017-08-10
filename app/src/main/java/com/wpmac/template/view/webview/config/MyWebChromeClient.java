@@ -34,6 +34,7 @@ public class MyWebChromeClient extends WebChromeClient {
     private View mXCustomView;
     private CustomViewCallback mXCustomViewCallback;
 
+
     public MyWebChromeClient(IWebPageView mIWebPageView) {
         this.mIWebPageView = mIWebPageView;
         this.mActivity = (WebViewActivity) mIWebPageView;
@@ -101,14 +102,16 @@ public class MyWebChromeClient extends WebChromeClient {
         super.onReceivedTitle(view, title);
         // 设置title
         mActivity.setTitle(title);
-        this.title = title;
+        this.webtitle = title;
     }
 
-    private String title = "";
+    private String webtitle = "";
 
     public String getTitle() {
-        return title + " ";
+        return webtitle + " ";
     }
+
+
 
     //扩展浏览器上传文件
     //3.0++版本

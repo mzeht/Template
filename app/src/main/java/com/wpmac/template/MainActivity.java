@@ -3,11 +3,11 @@ package com.wpmac.template;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.wpmac.template.base.BaseActivity;
 import com.wpmac.template.constants.ConstantsImageUrl;
@@ -29,6 +31,9 @@ import com.wpmac.template.view.MyFragmentPagerAdapter;
 import com.wpmac.template.view.statusbar.StatusBarUtil;
 
 import java.util.ArrayList;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements  ViewPager.OnPageChangeListener, View.OnClickListener {
 
@@ -78,7 +83,7 @@ public class MainActivity extends BaseActivity implements  ViewPager.OnPageChang
     private FrameLayout llTitleMenu;
     private Toolbar toolbar;
     private FloatingActionButton fab;
-    private NavigationView navView;
+    private RelativeLayout navView;
     private DrawerLayout drawerLayout;
     private ViewPager vpContent;
 
@@ -136,20 +141,35 @@ public class MainActivity extends BaseActivity implements  ViewPager.OnPageChang
 
 
     NavHeaderMainBinding bind;
+
+    navHeader mNavHeader=new navHeader();
+
+    class navHeader{
+        @BindView(R.id.day_night_switch)
+        SwitchCompat dayNightSwitch;
+
+        @BindView(R.id.ll_nav_exit)
+        LinearLayout llNavExit;
+
+        @BindView(R.id.iv_avatar)
+        ImageView ivAvatar;
+
+    }
     private void initDrawerLayout() {
-        mBinding.navView.inflateHeaderView(R.layout.nav_header_main);
-        View headerView = navView.getHeaderView(0);
+//        mBinding.navView.inflateHeaderView(R.layout.nav_header_main);
+//        View headerView = navView.getHeaderView(0);
 //        ButterKnife.bind(headViewBind, headerView);
-        bind = DataBindingUtil.bind(headerView);
-        bind.dayNightSwitch.setChecked(SPUtils.getNightMode());
-        ImgLoadUtil.displayCircle(bind.ivAvatar, ConstantsImageUrl.IC_AVATAR);
-        bind.llNavExit.setOnClickListener(this);
-        bind.ivAvatar.setOnClickListener(this);
-        bind.llNavHomepage.setOnClickListener(listener);
-        bind.llNavScanDownload.setOnClickListener(listener);
-        bind.llNavDeedback.setOnClickListener(listener);
-        bind.llNavAbout.setOnClickListener(listener);
-        bind.llNavLogin.setOnClickListener(listener);
+        ButterKnife.bind(mNavHeader, navView);
+//        bind = DataBindingUtil.bind(navView);
+        mNavHeader.dayNightSwitch.setChecked(SPUtils.getNightMode());
+        ImgLoadUtil.displayCircle(mNavHeader.ivAvatar, ConstantsImageUrl.IC_AVATAR);
+        mNavHeader.llNavExit.setOnClickListener(this);
+        mNavHeader.ivAvatar.setOnClickListener(this);
+//        bind.llNavHomepage.setOnClickListener(listener);
+//        bind.llNavScanDownload.setOnClickListener(listener);
+//        bind.llNavDeedback.setOnClickListener(listener);
+//        bind.llNavAbout.setOnClickListener(listener);
+//        bind.llNavLogin.setOnClickListener(listener);
     }
 
     private void initContentFragment() {

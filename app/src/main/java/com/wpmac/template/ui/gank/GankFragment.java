@@ -55,7 +55,7 @@ public class GankFragment extends BaseLoadFragment<FragmentGankBinding> {
         mTitleList.add("每日推荐");
         mTitleList.add("福利");
         mTitleList.add("干货订制");
-        mTitleList.add("大安卓");
+        mTitleList.add("Android");
         mFragments.add(TestFragment.newInstance());
         mFragments.add(TestFragment.newInstance());
         mFragments.add(TestFragment.newInstance());

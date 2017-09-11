@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\AndroidPj\\share-read\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\animator-v21\\design_appbar_state_list_animator.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\df4cb360c67b94ba99e8e38fbf2b5eb53372a904\\output\\res\\animator-v21\\design_appbar_state_list_animator.xml"
+    },
+    {
         "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\animator-v21\\design_appbar_state_list_animator.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\animator-v21\\design_appbar_state_list_animator.xml"
     }

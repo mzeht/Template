@@ -1,10 +1,24 @@
 [
     {
+<<<<<<< Updated upstream
+=======
+        "merged": "D:\\AndroidPj\\share-read\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\52d9a92265f8f6353ea5ac793aeee3c342f14d39\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+>>>>>>> Stashed changes
         "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     },
     {
         "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+<<<<<<< Updated upstream
+=======
+    },
+    {
+        "merged": "D:\\AndroidPj\\share-read\\xrecyclerview\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\52d9a92265f8f6353ea5ac793aeee3c342f14d39\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+>>>>>>> Stashed changes
     }
 ]

@@ -2,5 +2,12 @@
     {
         "merged": "D:\\AndroidProject\\Template\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\84e55e325cea94aa387a6b64c00f2510d783c864\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+<<<<<<< Updated upstream
+=======
+    },
+    {
+        "merged": "D:\\AndroidPj\\share-read\\xrecyclerview\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\52d9a92265f8f6353ea5ac793aeee3c342f14d39\\output\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+>>>>>>> Stashed changes
     }
 ]

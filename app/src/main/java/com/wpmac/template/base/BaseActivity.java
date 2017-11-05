@@ -11,9 +11,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
+import com.wpmac.premission.XPermissionUtils;
 import com.wpmac.template.debug.L;
 import com.wpmac.template.manager.AppManager;
-import com.wpmac.premisson.XPermissionUtils;
 
 /**
  * @author: wpmac  Date: 2017/6/14 Time: 下午1:14

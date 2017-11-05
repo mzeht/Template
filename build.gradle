@@ -2,21 +2,23 @@
 buildscript {
     repositories {
         jcenter()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.0'
 //        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
         classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
         //lambda
-        classpath 'me.tatarka:gradle-retrolambda:3.6.0'
+//        classpath 'me.tatarka:gradle-retrolambda:3.6.0'
         //lombok
-        classpath 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2'
+//        classpath 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2'
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.8.1'
 
     }
-    configurations.classpath.exclude group: 'com.android.tools.external.lombok'
+//    configurations.classpath.exclude group: 'com.android.tools.external.lombok'
 }
 
 /**
@@ -37,6 +39,7 @@ allprojects {
             url 'http://www.idescout.com/maven/repo/'
         }
         mavenCentral()
+        google()
     }
 
 }

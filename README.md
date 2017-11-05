@@ -84,4 +84,7 @@ RxObservableUtils.java
 
 
 
-# Template
+# 适配androidstudio3.0 gradle4.1
+
+
+
